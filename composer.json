@@ -1,0 +1,9 @@
+{
+  "name": "qf-dev/qf-article-region-restriction",
+  "type": "shopware-plugin",
+  "description": "Regionale Artikelbeschränkung",
+  "license": "proprietary",
+  "extra": {
+    "installer-name": "QfArticleRegionRestriction"
+  }
+}

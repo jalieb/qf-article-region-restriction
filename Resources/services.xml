@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+
+        <service id="qf_article_region_restriction.service.list_product_service_decorator"
+                 class="QfArticleRegionRestriction\Bundle\StoreFrontBundle\ListProductService"
+                 decorates="shopware_storefront.list_product_service"
+                 public="true">
+            <argument type="service" id="qf_article_region_restriction.service.list_product_service_decorator.inner"/>
+            <argument type="service" id="customer_search.dbal.gateway.service" />
+            <argument type="service" id="session" />
+            <argument type="service" id="template" />
+            <argument>%qf_article_region_restriction.plugin_dir%</argument>
+
+        </service>
+
+    </services>
+</container>
